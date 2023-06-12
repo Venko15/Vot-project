@@ -21,7 +21,7 @@ export class JokesService {
                     joke = resp.data.joke;
                     break;
                 default:
-                    return { code: 404, message: 'Invalid joke type' };
+                    return { code: 404, msg: 'Invalid joke type' };
             }
         }catch(err){
             throw Error("Failed to fetch");

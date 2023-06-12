@@ -7,7 +7,7 @@ getAdviceBtn.addEventListener('click', async () => {
 
 
     if(resp.code!=200){
-        alert("losho");
+        alert(resp.msg);
         return
     }
     adviceTextElement.textContent = resp.advice

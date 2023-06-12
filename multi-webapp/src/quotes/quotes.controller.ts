@@ -5,6 +5,7 @@ import * as querystring from 'querystring';
 import { NOTFOUND } from 'dns';
 import { randomInt } from 'crypto';
 import { join } from 'path';
+import { SkipThrottle, Throttle } from "@nestjs/throttler";
 
 let types = ["motivational","brba", "stoicism", "kanye"];
 @Controller('quotes')
@@ -15,6 +16,7 @@ export class QuotesController {
     async renderPage(@Res() res){
       res.sendFile(join(__dirname,"../../src/","public/html", "quotes.html"))
     }
+    @Throttle()
     @Get('getQuote')
     async getQuote(@Query('type') type?:string){
         

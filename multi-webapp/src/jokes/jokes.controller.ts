@@ -4,6 +4,7 @@ import axios from 'axios';
 import { JokesService } from './jokes.service';
 import { randomInt } from 'crypto';
 import { join } from 'path';
+import { SkipThrottle, Throttle } from "@nestjs/throttler";
 let config = {
     headers: {
         header1: "Accept: application/json",
@@ -19,7 +20,7 @@ export class JokesController {
   async renderPage(@Res() res){
       res.sendFile(join(__dirname,"../../src/","public/html", "jokes.html"))
   }
-
+  @Throttle()
   @Get("getJoke")
   async getJoke(@Query('type') type: string){
 

@@ -10,9 +10,9 @@ import { AdvicesService } from './advices/advices.service';
 import { QuotesController } from './quotes/quotes.controller';
 import { QuotesService } from './quotes/quotes.service';
 import { QuotesModule } from './quotes/quotes.module';
-
+import { ThrottlerModule } from '@nestjs/throttler/dist/throttler.module';
 @Module({
-  imports: [JokesModule, AdvicesModule, QuotesModule],
+  imports: [ThrottlerModule.forRoot({ttl:60, limit:15}),JokesModule, AdvicesModule, QuotesModule],
   controllers: [AppController, JokesController, AdvicesContoller, QuotesController],
   providers: [AppService, JokesService, AdvicesService,QuotesService],
 })

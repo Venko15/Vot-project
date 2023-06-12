@@ -15,8 +15,11 @@ btn.addEventListener('click', async () => {
   btn.disabled = true; 
   var resp = await makeRequest(apiUrl);
   btn.disabled = false; 
+  if(resp.code!=200){
+    alert(resp.msg);
+    return
+  }
 
-  console.log(resp);
   quoteTextElement.textContent = resp.quote.text;
   quoteAuthorElement.textContent = resp.quote.author
 

@@ -12,7 +12,8 @@ btn.addEventListener('click', async function(ev){
 
    var resp =  await makeRequest(apiUrl);
     if(resp.code != 200){
-        alert("nestho se schupi");
+        alert(resp.msg);
+        return;
     }
 
    jokeTextElement.textContent = resp.joke;

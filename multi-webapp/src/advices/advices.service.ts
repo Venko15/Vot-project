@@ -9,7 +9,7 @@ export class AdvicesService{
             let advice = resp.data.slip.advice;
             return {code:200, advice:advice};
         }catch(err){
-            return {code:404};
+            return {code:404, msg:"Error occured"};
         }
     }
 }
