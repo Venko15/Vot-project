@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quotes App</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/common.css" >
+  <link rel="stylesheet" type="text/css" href="../static/css/quotes.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/css/dropdown.css"/>
+
+  </style>
+</head>
+<body>
+  <h1>Quotes App</h1>
+  
+  <div class="container">
+    <div class="quote-card">
+      <div class="dropdown">
+        <label for="quoteType">Select Quote Type:</label>
+        <select id="quoteType">
+          <option value="any">Any</option>
+          <option value="motivational">Motivational</option>
+          <option value="brba">Breaking Bad</option>
+          <option value="stoicism">Stoicism</option>
+          <option value="kanye">Kanye</option>
+        </select>
+      </div>
+      <div class="quote-text" id="quoteText"></div>
+      <div class="quote-author" id="quoteAuthor"></div>
+      <div class="loading">
+        <div class="loader" id="loader"></div>
+      </div>
+      <button class="button" id="getQuoteBtn">Get Quote</button>
+    </div>
+  </div>
+  
+  <script src="../static/js/requests.js"></script>
+  <script src="../static/js/quotes.js"></script>
+</body>
+</html>

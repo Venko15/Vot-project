@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jokes App</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/common.css" >
+  <link rel="stylesheet" type="text/css" href="../static/css/jokes.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/css/dropdown.css"/>
+</head>
+<body>
+  <h1>Jokes App</h1>
+  
+  <div class="container">
+    <div class="joke-card">
+      <div class="dropdown">
+        <label for="jokeType">Select Joke Type:</label>
+        <select id="jokeType">
+            <option value="any">Any Jokes</option>
+            <option value="chuck">Chuck Norris Jokes</option>
+            <option value="dad">Dad Jokes</option>
+            <option value="yomama">Yo Mama Jokes</option>
+        </select>
+      </div>
+      <div class="joke-text" id="jokeText"></div>
+      <div class="joke-type" id="jokeTypeText"></div>
+      <div class="loading">
+        <div class="loader" id="loader"></div>
+      </div>
+      <button class="button" id="getJokeBtn">Get Joke</button>
+    </div>
+  </div>
+  
+  <script src="../static/js/requests.js"></script>
+  <script src="../static/js/jokes.js"></script>
+</body>
+</html>
