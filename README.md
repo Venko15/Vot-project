@@ -14,8 +14,9 @@ Go to settings in Docker Desktop
 git clone https://github.com/Venko15/Vot-project.git
 ```
 # Run guide
+you should be in the multi-webapp folder
 ```
-cd multi-webapp && chmod +x run.sh && ./run.sh
+chmod +x run.sh && ./run.sh
 ```
 if there are problems with the hpa, run the following script
 ```
